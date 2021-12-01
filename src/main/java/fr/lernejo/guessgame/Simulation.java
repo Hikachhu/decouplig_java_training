@@ -3,6 +3,7 @@ package fr.lernejo.guessgame;
 import fr.lernejo.logger.Logger;
 import fr.lernejo.logger.LoggerFactory;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Simulation {
@@ -15,6 +16,7 @@ public class Simulation {
     }
 
     public void initialize(long numberToGuess) {
+        logger.log("Le nombre à trouver est "+numberToGuess);
         this.numberToGuess=numberToGuess;
     }
 
@@ -22,8 +24,8 @@ public class Simulation {
      * @return true if the player have guessed the right number
      */
     private boolean nextRound() {
-        System.out.println("Entrez un nombre");
         long nombre = player.askNextGuess();
+        logger.log("Le nombre entrée est "+nombre);
         if (nombre==numberToGuess){
             return true;
         }else if(nombre > numberToGuess){
@@ -35,7 +37,11 @@ public class Simulation {
     }
 
     public void loopUntilPlayerSucceed() {
-        while(!nextRound());
+        long time = System.currentTimeMillis();
+        SimpleDateFormat sd = new SimpleDateFormat("mm:ss.SSS");
+        int number=0;
+        while(number<1000&&!nextRound())number++;
+        System.out.println(sd.format(System.currentTimeMillis()-time));
     }
 
 }
