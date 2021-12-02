@@ -25,14 +25,15 @@ public class Simulation {
      */
     private boolean nextRound() {
         long nombre = player.askNextGuess();
-        logger.log("Le nombre entrée est "+nombre);
         if (nombre==numberToGuess){
+            logger.log("win");
             return true;
         }else if(nombre > numberToGuess){
-           player.respond(true);
+            player.respond(true);
         }else{
             player.respond(false);
         }
+        logger.log("Le nombre entrée est "+nombre);
         return false;
     }
 

@@ -10,7 +10,7 @@ public class ComputerPlayer implements Player{
 
     @Override
     public long askNextGuess() {
-        logger.log("Le bot envoi : "+(Long)((borneDroite+borneGauche)/2));
+    //    logger.log("Le bot envoi : "+(Long)((borneDroite+borneGauche)/2));
         return (Long)((borneDroite+borneGauche)/2);
     }
 
