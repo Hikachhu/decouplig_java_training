@@ -33,7 +33,7 @@ public class Simulation {
         }else{
             player.respond(false);
         }
-        logger.log("Le nombre entrée est "+nombre);
+       // logger.log("Le nombre entrée est "+nombre);
         return false;
     }
 
