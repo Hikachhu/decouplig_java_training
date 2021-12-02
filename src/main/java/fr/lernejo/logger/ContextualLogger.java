@@ -9,7 +9,7 @@ public class ContextualLogger implements Logger{
     String callerClass;
     Logger delegateLogger;
 
-    ContextualLogger(String callerClass,Logger delegateLogger) {
+    public ContextualLogger(String callerClass,Logger delegateLogger) {
         this.callerClass=callerClass;
         this.delegateLogger=delegateLogger;
     }

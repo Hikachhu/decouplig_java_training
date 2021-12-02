@@ -25,7 +25,7 @@ public class Launcher {
         }
         else{
             System.out.println("Usage:");
-            System.out.println(" -interactive");
+            System.out.println("-interactive");
             System.out.println("-auto <Secret number>");
         }
     }
