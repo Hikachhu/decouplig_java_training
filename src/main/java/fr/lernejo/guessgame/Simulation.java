@@ -16,7 +16,7 @@ public class Simulation {
     }
 
     public void initialize(long numberToGuess) {
-        logger.log("Le nombre à trouver est "+numberToGuess);
+   //     logger.log("Le nombre à trouver est "+numberToGuess);
         this.numberToGuess=numberToGuess;
     }
 
